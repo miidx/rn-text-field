@@ -15,7 +15,10 @@ export default class Counter extends PureComponent {
     baseColor: PropTypes.string.isRequired,
     errorColor: PropTypes.string.isRequired,
 
-    style: Text.propTypes.style,
+    style: PropTypes.objectOf(PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+    ])),
   };
 
   render() {
